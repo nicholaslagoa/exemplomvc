@@ -14,7 +14,8 @@ namespace ExemploMVC.Models
         //dentro do () pode-se colocar outras coisas, mas só quis colocar uma ErrorMessage
         public string Descricao { get; set; }
 
-        public List<Produto> Produtos { get; set; }//para se conectar com produtos
-
+        //public List<Produto> Produtos { get; set; }//para se conectar com produtos
+        //a linha acima foi retirada porque tava saindo no swagger errado(saía produtos: null), fora a referência circular pois
+        //o produto pede uma categoria, e uma categoria pede produto
     }
 }
